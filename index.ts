@@ -1,2 +1,4 @@
-type Member = [number, boolean];
-let john: Member = [123, true];
+type Member = {
+  [key: string]: string;
+};
+let john: Member = { name: "kim", age: "123" };
