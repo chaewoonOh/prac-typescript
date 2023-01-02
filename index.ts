@@ -1,1 +1,1 @@
-let 이름: string[] = ["kim", "park"];
+type Name = string | number;
