@@ -1,3 +1,2 @@
-function 함수(x: number): number {
-  return x * 2;
-}
+type Member = [number, boolean];
+let john: Member = [123, true];
