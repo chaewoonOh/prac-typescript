@@ -1,11 +1,9 @@
-function hello(x) {
-    if (x) {
-        console.log("안녕하세요" + x);
+function Narrowing(x) {
+    if (typeof x === "string") {
+        return x + "1";
     }
     else {
-        console.log("이름이 없습니다");
+        return x + 1;
     }
 }
-function 자릿수세기(x) {
-    return x.toString().length;
-}
+Narrowing(123);
