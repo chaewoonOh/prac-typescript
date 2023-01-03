@@ -1,3 +1,10 @@
-type Animal = string | number | undefined;
+type PositionxX = { x: number };
+type PositionxX = number;
 
-let 동물: Animal = 123;
+type PositionxX = { y: number };
+
+type PositionxY = { y: number };
+
+type NewType = PositionxX & PositionxY;
+
+let position: NewType = { x: 10, y: 20 };
