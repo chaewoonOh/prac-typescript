@@ -1,5 +1,13 @@
-function 함수(a: "가위" | "바위" | "보"): ("가위" | "바위" | "보")[] {
-  return ["가위"];
-}
+let 회원정보 = {
+  name: "kim",
+  age: 30,
+  plusOne(x) {
+    return x + 1;
+  },
+  changeName: () => {
+    console.log("안녕");
+  },
+};
 
-함수("가위");
+회원정보.plusOne(1);
+회원정보.changeName();
