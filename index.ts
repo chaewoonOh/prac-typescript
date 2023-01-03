@@ -1,10 +1,4 @@
-type CutType = (x: string) => string;
-
-let cutZero: CutType = function (x) {
-  let result = x.replace(/^0+/, "");
-  return result;
-};
-function removeDash(x: string): number {
-  let result = x.replace(/-/g, "");
-  return parseFloat(result);
+let 이미지 = document.querySelector("#image");
+if (이미지 instanceof HTMLImageElement) {
+  이미지.src = "change.jpg";
 }
