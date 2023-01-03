@@ -1,10 +1,5 @@
-type MyType = {
-  color?: string;
-  size: number;
-  readonly position: number[];
-};
+function 함수(a: "가위" | "바위" | "보"): ("가위" | "바위" | "보")[] {
+  return ["가위"];
+}
 
-let test: MyType = {
-  size: 123,
-  position: [1, 2, 3],
-};
+함수("가위");
