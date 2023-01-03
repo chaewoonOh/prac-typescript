@@ -1,23 +1,13 @@
-class Word {
-  num;
-  str;
-
-  constructor(...param) {
-    let 숫자들: number[] = [];
-    let 문자들: string[] = [];
-
-    param.forEach((i) => {
-      if (typeof i === "string") {
-        문자들.push(i);
-      } else {
-        숫자들.push(i);
-      }
-    });
-    this.num = 숫자들;
-    this.str = 문자들;
-  }
+interface MathObj {
+  plus: (a: number, b: number) => number;
+  minus: (a: number, b: number) => number;
 }
 
-let obj = new Word("kim", 3, 5, "park");
-console.log(obj.num);
-console.log(obj.str);
+let 오브젝트: MathObj = {
+  plus(a, b) {
+    return a + b;
+  },
+  minus(a, b) {
+    return a - b;
+  },
+};
