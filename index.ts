@@ -1,10 +1,10 @@
-type PositionxX = { x: number };
-type PositionxX = number;
+type MyType = {
+  color?: string;
+  size: number;
+  readonly position: number[];
+};
 
-type PositionxX = { y: number };
-
-type PositionxY = { y: number };
-
-type NewType = PositionxX & PositionxY;
-
-let position: NewType = { x: 10, y: 20 };
+let test: MyType = {
+  size: 123,
+  position: [1, 2, 3],
+};
