@@ -1,13 +1,10 @@
-let 회원정보 = {
-  name: "kim",
-  age: 30,
-  plusOne(x) {
-    return x + 1;
-  },
-  changeName: () => {
-    console.log("안녕");
-  },
-};
+type CutType = (x: string) => string;
 
-회원정보.plusOne(1);
-회원정보.changeName();
+let cutZero: CutType = function (x) {
+  let result = x.replace(/^0+/, "");
+  return result;
+};
+function removeDash(x: string): number {
+  let result = x.replace(/-/g, "");
+  return parseFloat(result);
+}
