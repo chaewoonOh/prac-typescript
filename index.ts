@@ -1,11 +1,13 @@
-namespace GoodDog {
-  export type Dog = string;
-}
-namespace BadDog {
-  export interface Dog {
-    name: string;
-  }
-}
+function 함수(...rest: (string | number)[]) {
+  let result: [string[], number[]] = [[], []];
 
-let dog1: GoodDog.Dog = "bark";
-let dog2: BadDog.Dog = { name: "paw" };
+  rest.forEach((a) => {
+    if (typeof a === "string") {
+      result[0].push(a);
+    } else {
+      result[1].push(a);
+    }
+  });
+
+  return result;
+}
