@@ -1,13 +1,12 @@
-function 함수(...rest: (string | number)[]) {
-  let result: [string[], number[]] = [[], []];
+interface CarType {
+  model: string;
+  tax: (price: number) => number;
+}
 
-  rest.forEach((a) => {
-    if (typeof a === "string") {
-      result[0].push(a);
-    } else {
-      result[1].push(a);
-    }
-  });
-
-  return result;
+class Car implements CarType {
+  model; ///any 타입됨
+  tax(a) {
+    ///a 파라미터는 any 타입됨
+    return a * 0.1;
+  }
 }
