@@ -1,12 +1,3 @@
-type Bus = {
-  color: string;
-  model: boolean;
-  price: number;
-};
-
-type TypeChanger<MyType, T> = {
-  [key in keyof MyType]: T;
-};
-
-type NewBus = TypeChanger<Bus, boolean>;
-type NewBus2 = TypeChanger<Bus, string[]>;
+type Age<T> = T extends [string, ...any] ? T[0] : unknown;
+let age1: Age<[string, number]>;
+let age2: Age<[boolean, number]>;
