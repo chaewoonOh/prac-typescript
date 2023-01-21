@@ -1,3 +1,6 @@
-type Age<T> = T extends [string, ...any] ? T[0] : unknown;
-let age1: Age<[string, number]>;
-let age2: Age<[boolean, number]>;
+function 함수<MyType>(x: MyType[]): MyType {
+  return x[0];
+}
+
+let a = 함수<number>([4, 2]);
+let b = 함수<string>(["kim", "park"]);
