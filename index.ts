@@ -1,6 +1,10 @@
-function 함수<MyType>(x: MyType[]): MyType {
-  return x[0];
-}
+type CutType = (x: string) => string;
 
-let a = 함수<number>([4, 2]);
-let b = 함수<string>(["kim", "park"]);
+let cutZero: CutType = function (x) {
+  let result = x.replace(/^0+/, "");
+  return result;
+};
+function removeDash(x: string): number {
+  let result = x.replace(/-/g, "");
+  return parseFloat(result);
+}
