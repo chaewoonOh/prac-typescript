@@ -8,3 +8,12 @@ function removeDash(x: string): number {
   let result = x.replace(/-/g, "");
   return parseFloat(result);
 }
+class User {
+  protected x = 10;
+}
+
+class NewUser extends User {
+  doThis() {
+    this.x = 20;
+  }
+}
