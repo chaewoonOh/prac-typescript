@@ -1,10 +1,8 @@
-type MyType = {
-  color?: string;
-  size: number;
-  readonly position: number[];
-};
+interface Student {
+  name: string;
+}
+interface Teacher {
+  age: number;
+}
 
-let 테스트용변수: MyType = {
-  size: 123,
-  position: [1, 2, 3],
-};
+let 변수: Student & Teacher = { name: "kim", age: 90 };
