@@ -1,8 +1,7 @@
-interface Student {
-  name: string;
+function 함수(parameter: string) {
+  if (typeof parameter === "string") {
+    parameter + 1;
+  } else {
+    parameter;
+  }
 }
-interface Teacher {
-  age: number;
-}
-
-let 변수: Student & Teacher = { name: "kim", age: 90 };
