@@ -1,7 +1,8 @@
-function 함수(parameter: string) {
-  if (typeof parameter === "string") {
-    parameter + 1;
-  } else {
-    parameter;
+type Fish = { swim: string };
+type Bird = { fly: string };
+function 함수(animal: Fish | Bird) {
+  if ("swim" in animal) {
+    return animal.swim;
   }
+  return animal.fly;
 }
