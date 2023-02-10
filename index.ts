@@ -1,8 +1,13 @@
-class User {
-  x = 10;
-  y = 20;
-}
+function 함수(...rest: (string | number)[]) {
+  let result: [string[], number[]] = [[], []];
 
-let john = new User();
-john.x; //가능
-User.x; //불가능
+  rest.forEach((a) => {
+    if (typeof a === "string") {
+      result[0].push(a);
+    } else {
+      result[1].push(a);
+    }
+  });
+
+  return result;
+}
