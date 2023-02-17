@@ -1,8 +1,8 @@
-class Person {
+class Person<T> {
   name;
-  age;
-  constructor() {
-    this.name = "kim";
-    this.age = 20;
+  constructor(a: T) {
+    this.name = a;
   }
 }
+let a = new Person<string>("어쩌구");
+a.name; //string 타입이 됨
