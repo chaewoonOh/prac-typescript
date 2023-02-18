@@ -1,8 +1,4 @@
-class Person<T> {
-  name;
-  constructor(a: T) {
-    this.name = a;
-  }
-}
-let a = new Person<string>("어쩌구");
-a.name; //string 타입이 됨
+index.ts;
+
+declare let a: number;
+console.log(a + 1);
